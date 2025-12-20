@@ -1,14 +1,2 @@
-
-> app@0.0.0 dev /app
-> vite
-
-
-  VITE v7.3.0  ready in 329 ms
-
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-12:34:58 AM [vite] changed tsconfig file detected: /app/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
-12:34:58 AM [vite] vite.config.ts changed, restarting server...
-12:34:58 AM [vite] (client) page reload index.html
-12:34:58 AM [vite] (client) Re-optimizing dependencies because vite config has changed
-12:34:58 AM [vite] server restarted.
+undefined
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command "dev" not found
