@@ -16,26 +16,38 @@
                 <article class="project-card">
                     <h3>Proyecto Alpha</h3>
                     <p>Descripción breve del estado actual y los próximos pasos para el Proyecto Alpha.</p>
-                    <a href="#" class="button">Ver Detalles</a>
+                    <a href="#" class="button" data-project="alpha" data-testid="ver-detalles-alpha">Ver Detalles</a>
                 </article>
                 <article class="project-card">
                     <h3>Proyecto Beta</h3>
                     <p>Descripción breve del estado actual y los próximos pasos para el Proyecto Beta.</p>
-                    <a href="#" class="button">Ver Detalles</a>
+                    <a href="#" class="button" data-project="beta" data-testid="ver-detalles-beta">Ver Detalles</a>
                 </article>
                 <article class="project-card">
                     <h3>Proyecto Gamma</h3>
                     <p>Descripción breve del estado actual y los próximos pasos para el Proyecto Gamma.</p>
-                    <a href="#" class="button">Ver Detalles</a>
+                    <a href="#" class="button" data-project="gamma" data-testid="ver-detalles-gamma">Ver Detalles</a>
                 </article>
             </section>
             <aside class="learning-visual">
                 <h2>Visual de Aprendizaje</h2>
                 <div class="visual-placeholder">
-                    <p>Área para visualización de datos de aprendizaje.</p>
+                    <canvas id="learningChart"></canvas>
                 </div>
             </aside>
         </main>
     </div>
+
+    <!-- Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
