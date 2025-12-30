@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Proyectos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Menú</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-button active">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-button">
+                    <span class="nav-icon">📁</span>
+                    <span>Mis Proyectos</span>
+                </button>
+                <button class="nav-button">
+                    <span class="nav-icon">👥</span>
+                    <span>Equipo</span>
+                </button>
+                <button class="nav-button">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Configuración</span>
+                </button>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Dashboard Personal de Proyectos</h1>
+            </header>
+            <section class="projects-grid">
+                <div class="project-card">
+                    <h3>Proyecto Alpha</h3>
+                    <p>Desarrollo de una aplicación móvil para gestionar tareas.</p>
+                    <div class="project-card-footer">
+                        <span>Progreso: 60%</span>
+                        <button class="card-button">Ver Detalles</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Proyecto Beta</h3>
+                    <p>Migración de base de datos y optimización de consultas.</p>
+                    <div class="project-card-footer">
+                        <span>Progreso: 85%</span>
+                        <button class="card-button">Ver Detalles</button>
+                    </div>
+                </div>
+                <div class="project-card new-project-card">
+                    <h3><span class="plus-icon">+</span> Nuevo Proyecto</h3>
+                    <p>Iniciar un nuevo proyecto desde cero.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
