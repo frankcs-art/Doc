@@ -1,38 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button
-          onClick={() => setCount((count) => count + 1)}
-          aria-label={`Increment count. Current count: ${count}`}
-        >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="dashboard-container">
+      <header className="dashboard-header">
+        <h1>Panel de Proyectos</h1>
+      </header>
+      <main>
+        <section className="projects-section">
+          <h2>Mis Proyectos</h2>
+          <div className="projects-grid">
+            <div className="project-card">
+              <h3>Proyecto Alpha</h3>
+              <p>Descripción breve del estado actual del proyecto.</p>
+              <button>Ver Detalles</button>
+            </div>
+            <div className="project-card">
+              <h3>Proyecto Beta</h3>
+              <p>Descripción breve del estado actual del proyecto.</p>
+              <button>Ver Detalles</button>
+            </div>
+            <div className="project-card">
+              <h3>Nuevo Proyecto</h3>
+              <button>+ Agregar</button>
+            </div>
+          </div>
+        </section>
+        <section className="learning-section">
+          <h2>Área de Aprendizaje</h2>
+          <div
+            className="editable-content"
+            contentEditable="true"
+            suppressContentEditableWarning={true}
+          >
+            <p>Haz clic aquí para escribir tus notas...</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
