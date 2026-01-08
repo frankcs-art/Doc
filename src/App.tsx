@@ -1,37 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button
-          onClick={() => setCount((count) => count + 1)}
-          aria-label={`Increment count. Current count: ${count}`}
-        >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="dashboard">
+      <header className="dashboard-header">
+        <h1>Panel de Proyectos Personales</h1>
+      </header>
+      <main className="dashboard-main">
+        <section className="projects-section">
+          <h2>Mis Proyectos</h2>
+          <div className="project-buttons">
+            <button>Proyecto "Galaxia"</button>
+            <button>Proyecto "Océano"</button>
+            <button>Nuevo Proyecto</button>
+          </div>
+        </section>
+        <section className="learning-section">
+          <h2>Visual de Aprendizaje</h2>
+          <div
+            className="editable-visual"
+            contentEditable="true"
+            aria-label="Área de notas editable. Haz clic para empezar a escribir."
+            role="textbox"
+          >
+            <p>Aquí puedes escribir tus notas...</p>
+          </div>
+        </section>
+      </main>
+      <footer className="dashboard-footer">
+        <p>🎨 Diseñado con cariño por Palette.</p>
+      </footer>
+    </div>
   )
 }
 

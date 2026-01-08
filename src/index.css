@@ -1,11 +1,22 @@
 :root {
+  /* Palette */
+  --background-light: #f4f7f9;
+  --text-light: #213547;
+  --primary-light: #3a7bd5;
+  --primary-hover-light: #2a6ac4;
+  --card-background-light: #ffffff;
+  --border-light: #e0e0e0;
+
+  --background-dark: #1a1a1a;
+  --text-dark: rgba(255, 255, 255, 0.87);
+  --primary-dark: #6495ed;
+  --primary-hover-dark: #7ca8ff;
+  --card-background-dark: #242424;
+  --border-dark: #424242;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +24,116 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Light Theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-light);
+    background-color: var(--background-light);
+  }
+  button {
+    background-color: var(--primary-light);
+    color: white;
+  }
+  button:hover {
+    background-color: var(--primary-hover-light);
+  }
+  .editable-visual {
+    background-color: var(--card-background-light);
+    border: 1px solid var(--border-light);
+  }
 }
-a:hover {
-  color: #535bf2;
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--text-dark);
+    background-color: var(--background-dark);
+  }
+  button {
+    background-color: var(--primary-dark);
+    color: var(--background-dark);
+  }
+  button:hover {
+    background-color: var(--primary-hover-dark);
+  }
+  .editable-visual {
+    background-color: var(--card-background-dark);
+    border: 1px solid var(--border-dark);
+  }
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.dashboard {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  text-align: center;
+}
+
+.projects-section, .learning-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.8em 1.5em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s, border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.editable-visual {
+  min-height: 150px;
+  padding: 1rem;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.editable-visual:focus {
+  outline: 2px solid var(--primary-light);
+  border-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  .editable-visual:focus {
+    outline-color: var(--primary-dark);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.dashboard-footer {
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0.7;
 }
