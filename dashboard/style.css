@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1, h2 {
+  color: #0056b3;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.proyectos, .aprendizaje {
+  margin-bottom: 2rem;
+}
+
+.proyecto-botones button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.proyecto-botones button:hover {
+  background-color: #0056b3;
+}
+
+.editable {
+  border: 1px solid #ccc;
+  padding: 15px;
+  min-height: 100px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.editable:focus {
+  outline: 2px solid #007bff;
+  border-color: #007bff;
+}
