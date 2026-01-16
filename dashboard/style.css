@@ -1,0 +1,120 @@
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --text-color: #212529;
+  --border-color: #dee2e6;
+  --border-radius: 0.5rem;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 2rem;
+}
+
+.dashboard {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-header {
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.projects h2,
+.learning h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-item {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-item h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-item p {
+  flex-grow: 1;
+  margin: 0 0 1.5rem;
+  color: #495057;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+.btn.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+.editable-visual {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  min-height: 150px;
+  box-shadow: var(--box-shadow);
+  outline: 2px dashed transparent;
+  transition: outline 0.2s ease-in-out;
+}
+
+.editable-visual:focus-within {
+  outline-color: var(--primary-color);
+  outline-offset: 2px;
+}
+
+.editable-visual p {
+  margin: 0;
+  color: #6c757d;
+}
