@@ -54,6 +54,11 @@ h2 {
 
 .projects-list li {
   margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.projects-list li:hover {
+  transform: translateX(5px);
 }
 
 /* Buttons */
@@ -96,4 +101,12 @@ h2 {
 .learning-box p {
   margin-top: 0;
   color: #555;
+}
+
+/* Learning Box Placeholder */
+.learning-box:empty::before {
+  content: "Escribe aquí tus notas...";
+  color: #aaa;
+  font-style: italic;
+  cursor: text;
 }
