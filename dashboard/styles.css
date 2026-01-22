@@ -97,3 +97,11 @@ h2 {
   margin-top: 0;
   color: #555;
 }
+
+/* Learning Box Placeholder */
+.learning-box:empty::before {
+  content: "Aquí puedes escribir tus notas y reflexiones sobre tu aprendizaje...";
+  color: #aaa;
+  font-style: italic;
+  pointer-events: none; /* Make sure the placeholder text doesn't interfere with clicks */
+}
