@@ -97,3 +97,9 @@ h2 {
   margin-top: 0;
   color: #555;
 }
+
+.learning-box:empty::before {
+  content: "Aquí puedes escribir tus notas y reflexiones sobre tu aprendizaje...";
+  color: #999;
+  pointer-events: none;
+}
