@@ -97,3 +97,11 @@ h2 {
   margin-top: 0;
   color: #555;
 }
+
+/* Placeholder for the editable learning box */
+.learning-box:empty::before {
+  content: "Escribe aquí tus notas y reflexiones...";
+  color: #aaa;
+  font-style: italic;
+  cursor: text;
+}
