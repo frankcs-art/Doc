@@ -68,11 +68,12 @@ h2 {
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover, .btn:focus {
   background-color: #2980b9;
+  transform: translateY(-2px);
   outline: 2px solid #1a5f8a;
   outline-offset: 2px;
 }
@@ -96,4 +97,20 @@ h2 {
 .learning-box p {
   margin-top: 0;
   color: #555;
+}
+
+.learning-box:empty::before {
+  content: "Escribe aquí tus notas y reflexiones...";
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  color: #777;
 }
