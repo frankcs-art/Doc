@@ -77,6 +77,11 @@ h2 {
   outline-offset: 2px;
 }
 
+.btn:active {
+  background-color: #2475ab;
+  transform: translateY(1px);
+}
+
 /* Learning Box */
 .learning-box {
   border: 1px solid #ccc;
@@ -96,4 +101,10 @@ h2 {
 .learning-box p {
   margin-top: 0;
   color: #555;
+}
+
+.learning-box:empty::before {
+  content: "Escribe aquí tus notas y reflexiones...";
+  color: #aaa;
+  font-style: italic;
 }
