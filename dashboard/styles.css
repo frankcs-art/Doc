@@ -93,7 +93,8 @@ h2 {
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
 }
 
-.learning-box p {
-  margin-top: 0;
-  color: #555;
+.learning-box:empty::before {
+  content: "Aquí puedes escribir tus notas y reflexiones sobre tu aprendizaje...";
+  color: #aaa;
+  cursor: text;
 }
