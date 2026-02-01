@@ -97,3 +97,10 @@ h2 {
   margin-top: 0;
   color: #555;
 }
+
+.learning-box:empty::before {
+  content: "Escribe aquí tus notas y reflexiones sobre tu aprendizaje...";
+  color: #888;
+  font-style: italic;
+  pointer-events: none;
+}
