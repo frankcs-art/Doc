@@ -1,99 +1,162 @@
-/* General Body Styles */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f7f9;
-  color: #333;
-  margin: 0;
-  padding: 20px;
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #2c3e50;
+  --bg-color: #f0f4f8;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
 }
 
-/* Container */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 40px 20px;
+}
+
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 40px;
 }
 
 /* Header */
 .header {
-  width: 100%;
   text-align: center;
   margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
 }
 
 .header h1 {
-  color: #2c3e50;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #666;
+  font-size: 1.1rem;
 }
 
 /* Sections */
-.projects, .learning {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  flex: 1;
-  min-width: 300px; /* Ensures sections don't get too narrow */
-}
-
 h2 {
-  margin-top: 0;
-  color: #34495e;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  border-left: 5px solid var(--primary-color);
+  padding-left: 15px;
 }
 
-/* Project List */
-.projects-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-.projects-list li {
-  margin-bottom: 10px;
+.project-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.project-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  margin: 10px 0;
+  color: var(--secondary-color);
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
+  flex-grow: 1;
 }
 
 /* Buttons */
 .btn {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background-color: #3498db;
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--primary-color);
   color: white;
-  text-align: center;
   text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  box-sizing: border-box;
-  transition: background-color 0.3s ease;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: var(--transition);
 }
 
 .btn:hover, .btn:focus {
-  background-color: #2980b9;
-  outline: 2px solid #1a5f8a;
+  background-color: #357abd;
+  outline: 3px solid rgba(74, 144, 226, 0.4);
   outline-offset: 2px;
 }
 
-/* Learning Box */
+/* Learning Section */
+.instruction {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
 .learning-box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  min-height: 200px;
-  border-radius: 5px;
-  background-color: #fafafa;
-  transition: box-shadow 0.3s ease;
+  background-color: #fff9db; /* Pastel yellow like a sticky note */
+  border: 2px dashed #f0d500;
+  border-radius: var(--border-radius);
+  padding: 25px;
+  min-height: 250px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  position: relative;
+  transition: var(--transition);
 }
 
-.learning-box:focus-within {
+.learning-box:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.2);
 }
 
-.learning-box p {
-  margin-top: 0;
-  color: #555;
+/* Placeholder for contenteditable */
+.learning-box:empty::before {
+  content: "📝 Escribe aquí tus notas... (ej. Hoy aprendí sobre CSS Grid)";
+  color: #999;
+  pointer-events: none;
+}
+
+/* Footer */
+.footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
 }
