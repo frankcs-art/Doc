@@ -50,10 +50,9 @@ h2 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-.projects-list li {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* Buttons */
@@ -79,12 +78,19 @@ h2 {
 
 /* Learning Box */
 .learning-box {
-  border: 1px solid #ccc;
-  padding: 15px;
+  background-color: #fff9c4; /* Light yellow sticky note */
+  border: none;
+  border-left: 5px solid #fbc02d; /* Accent color on the left */
+  padding: 20px;
   min-height: 200px;
-  border-radius: 5px;
-  background-color: #fafafa;
-  transition: box-shadow 0.3s ease;
+  border-radius: 2px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.learning-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
 }
 
 .learning-box:focus-within {
@@ -93,7 +99,14 @@ h2 {
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
 }
 
+.learning-box:empty::before {
+  content: "Aquí puedes escribir tus notas y reflexiones sobre tu aprendizaje...";
+  color: #7a754c; /* Darkened for better contrast */
+  font-style: italic;
+  pointer-events: none;
+}
+
 .learning-box p {
-  margin-top: 0;
-  color: #555;
+  margin: 0;
+  color: #333;
 }
