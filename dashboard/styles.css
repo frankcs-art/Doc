@@ -47,13 +47,12 @@ h2 {
 
 /* Project List */
 .projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-.projects-list li {
-  margin-bottom: 10px;
 }
 
 /* Buttons */
@@ -77,23 +76,33 @@ h2 {
   outline-offset: 2px;
 }
 
-/* Learning Box */
+/* Learning Box (Sticky Note Style) */
 .learning-box {
-  border: 1px solid #ccc;
-  padding: 15px;
+  border: none;
+  padding: 20px;
   min-height: 200px;
-  border-radius: 5px;
-  background-color: #fafafa;
-  transition: box-shadow 0.3s ease;
+  border-radius: 2px;
+  background-color: #fff9c4; /* Sticky note yellow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+  position: relative;
+  cursor: text;
 }
 
-.learning-box:focus-within {
+.learning-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.learning-box:focus, .learning-box:focus-visible {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 0 0 3px rgba(52, 152, 219, 0.4);
 }
 
-.learning-box p {
-  margin-top: 0;
-  color: #555;
+/* Placeholder for empty contenteditable */
+.learning-box:empty::before {
+  content: attr(data-placeholder);
+  color: #7a754c; /* Darker shade for contrast */
+  font-style: italic;
+  pointer-events: none;
 }
