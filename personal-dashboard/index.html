@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Dashboard Personal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🚀 Mi Panel de Proyectos</h1>
+        <p>Gestiona tus ideas y sigue aprendiendo cada día.</p>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="section-projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">📂 Mis Proyectos</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>App de Notas</h3>
+                    <p>Una aplicación sencilla para capturar ideas rápidas.</p>
+                    <button class="btn-project" aria-label="Ver detalles del Proyecto App de Notas">Ver Proyecto</button>
+                </article>
+                <article class="project-card">
+                    <h3>Portfolio Web</h3>
+                    <p>Mi sitio personal construido con las últimas tecnologías.</p>
+                    <button class="btn-project" aria-label="Ver detalles del Proyecto Portfolio Web">Ver Proyecto</button>
+                </article>
+                <article class="project-card">
+                    <h3>E-commerce Alpha</h3>
+                    <p>Tienda virtual con carrito de compras y pagos.</p>
+                    <button class="btn-project" aria-label="Ver detalles del Proyecto E-commerce Alpha">Ver Proyecto</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-learning" aria-labelledby="learning-title">
+            <h2 id="learning-title">✍️ Notas de Aprendizaje</h2>
+            <div
+                class="sticky-note"
+                contenteditable="true"
+                role="textbox"
+                aria-multiline="true"
+                aria-label="Zona de aprendizaje editable. Escribe tus reflexiones aquí."
+                data-placeholder="Escribe aquí lo que has aprendido hoy..."></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Dashboard de Proyectos Personales</p>
+    </footer>
+</body>
+</html>
