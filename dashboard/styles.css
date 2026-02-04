@@ -68,13 +68,14 @@ h2 {
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover, .btn:focus {
   background-color: #2980b9;
   outline: 2px solid #1a5f8a;
   outline-offset: 2px;
+  transform: translateY(-2px);
 }
 
 /* Learning Box */
