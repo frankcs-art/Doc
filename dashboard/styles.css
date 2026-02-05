@@ -50,10 +50,9 @@ h2 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-.projects-list li {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* Buttons */
@@ -68,13 +67,14 @@ h2 {
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover, .btn:focus {
   background-color: #2980b9;
   outline: 2px solid #1a5f8a;
   outline-offset: 2px;
+  transform: translateY(-2px);
 }
 
 /* Learning Box */
@@ -84,7 +84,11 @@ h2 {
   min-height: 200px;
   border-radius: 5px;
   background-color: #fafafa;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.learning-box:hover, .learning-box:focus-within {
+  transform: translateY(-2px);
 }
 
 .learning-box:focus-within {
@@ -93,7 +97,8 @@ h2 {
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
 }
 
-.learning-box p {
-  margin-top: 0;
-  color: #555;
+.learning-box:empty::before {
+  content: "Aquí puedes escribir tus notas y reflexiones sobre tu aprendizaje...";
+  color: #777;
+  pointer-events: none;
 }
