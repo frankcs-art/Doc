@@ -50,10 +50,9 @@ h2 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-.projects-list li {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* Buttons */
@@ -68,32 +67,44 @@ h2 {
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   background-color: #2980b9;
   outline: 2px solid #1a5f8a;
   outline-offset: 2px;
+  transform: translateY(-2px);
 }
 
 /* Learning Box */
 .learning-box {
-  border: 1px solid #ccc;
-  padding: 15px;
+  border: 1px solid #e6e0a4;
+  padding: 20px;
   min-height: 200px;
-  border-radius: 5px;
-  background-color: #fafafa;
-  transition: box-shadow 0.3s ease;
+  border-radius: 2px;
+  background-color: #fff9c4;
+  color: #6b663d; /* Darker brown for better contrast (WCAG AA) */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.learning-box:empty::before {
+  content: "Escribe aquí tus notas...";
+  color: #6b663d;
+  opacity: 0.8; /* Increased opacity for better accessibility */
+  pointer-events: none;
+}
+
+.learning-box:hover,
+.learning-box:focus-within {
+  outline: none;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .learning-box:focus-within {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
-}
-
-.learning-box p {
-  margin-top: 0;
-  color: #555;
+  border-color: #d4cc70;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), 0 0 0 3px rgba(212, 204, 112, 0.3);
 }
