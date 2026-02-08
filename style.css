@@ -1,0 +1,100 @@
+:root {
+    --bg-color: #f4f7f9;
+    --primary-color: #ffffff;
+    --secondary-color: #eef1f4;
+    --font-color: #333;
+    --accent-color: #4a90e2;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.projects,
+.learning {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    flex-basis: 50%;
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.project-list .project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+}
+
+.project-item span {
+    font-weight: 500;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+.editable-content {
+    border: 1px dashed var(--border-color);
+    padding: 15px;
+    border-radius: 6px;
+    min-height: 100px;
+    outline: none;
+}
+
+.editable-content:focus {
+    border-style: solid;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Final newline */
