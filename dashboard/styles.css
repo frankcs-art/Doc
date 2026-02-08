@@ -50,10 +50,9 @@ h2 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-.projects-list li {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /* Buttons */
@@ -85,16 +84,19 @@ h2 {
   min-height: 200px;
   border-radius: 5px;
   background-color: #fafafa;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  color: #555;
+}
+
+.learning-box:empty::before {
+  content: "Escribe aquí tus notas y reflexiones...";
+  color: #999;
+  font-style: italic;
+  cursor: text;
 }
 
 .learning-box:focus-within {
   outline: none;
   border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
-}
-
-.learning-box p {
-  margin-top: 0;
-  color: #555;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
