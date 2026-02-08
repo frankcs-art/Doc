@@ -20,7 +20,7 @@ function App() {
       <div className="card">
         <button
           onClick={() => setCount((count) => count + 1)}
-          aria-label={`Increment count. Current count: ${count}`}
+          aria-label={`count is ${count}. Click to increment.`}
         >
           count is {count}
         </button>
