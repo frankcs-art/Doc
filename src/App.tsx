@@ -24,6 +24,22 @@ function App() {
         >
           count is {count}
         </button>
+        <div
+          aria-live="polite"
+          style={{
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+            padding: '0',
+            margin: '-1px',
+            overflow: 'hidden',
+            clip: 'rect(0, 0, 0, 0)',
+            whiteSpace: 'nowrap',
+            borderWidth: '0',
+          }}
+        >
+          {count > 0 && `Count is now ${count}`}
+        </div>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
