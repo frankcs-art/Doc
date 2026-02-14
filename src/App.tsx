@@ -9,11 +9,13 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
+          <span className="sr-only">(opens in a new tab)</span>
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
+          <span className="sr-only">(opens in a new tab)</span>
         </a>
       </div>
       <h1>Vite + React</h1>
